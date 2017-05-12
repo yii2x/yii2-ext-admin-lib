@@ -7,6 +7,7 @@
 namespace yii2x\ui\ext;
 
 use yii\base\Widget;
+use yii2x\ui\ext\assets\ExtJsAdminAsset;
 
 class Component extends Widget{
     
@@ -29,6 +30,8 @@ class Component extends Widget{
             $config = \yii\helpers\Json::encode($this->params);            
         }
 
+        ExtJsAdminAsset::register($this->getView());
+        
         return $this->render('Component', [
             'id' => $this->id,
             'config' => $config

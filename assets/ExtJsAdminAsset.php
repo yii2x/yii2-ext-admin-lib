@@ -37,6 +37,10 @@ class ExtJsAdminAsset extends AssetBundle
 
         }
 
+        $this->depends = [
+            'yii2x\common\assets\FontAwesomeAsset'
+        ];
+        
         parent::init();
     }    
     
